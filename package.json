@@ -1,0 +1,30 @@
+{
+  "name": "kana-sketch",
+  "private": true,
+  "version": "0.1.0",
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "packageManager": "pnpm@11.0.8",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "strokes": "node scripts/strokes.mjs",
+    "dev": "node scripts/strokes.mjs --check && vite",
+    "check": "node scripts/strokes.mjs --check && tsc --noEmit && vitest run",
+    "build": "node scripts/strokes.mjs --check && tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "node scripts/strokes.mjs --check && vitest run"
+  },
+  "dependencies": {
+    "preact": "^11.2.0",
+    "qrcode-generator": "^2.0.4"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.6",
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.1"
+  }
+}
